@@ -7,9 +7,16 @@ class User: Serializable {
         private const val serialVersionUID = 1L
     }
 
-    private var id: String? = null
-    private var name: String? = null
-    private var email: String? = null
+    var id: String? = null
+    var name: String? = null
+    var email: String? = null
+
+    constructor(id: String?, name: String?, email: String?) {
+        this.id = id
+        this.name = name
+        this.email = email
+    }
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
